@@ -29780,47 +29780,104 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = Keys;
 
-var _react = _interopRequireDefault(require("react"));
+var _react = _interopRequireWildcard(require("react"));
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 function Keys() {
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
+  var _useState = (0, _react.useState)(0),
+      _useState2 = _slicedToArray(_useState, 2),
+      number = _useState2[0],
+      setNumber = _useState2[1];
+
+  function handleClick(e) {
+    console.log(e.target.dataset.value);
+  }
+
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", null), /*#__PURE__*/_react.default.createElement("div", {
     className: "keys"
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "key ac"
-  }, "AC"), /*#__PURE__*/_react.default.createElement("div", {
-    className: "key division"
-  }, "/"), /*#__PURE__*/_react.default.createElement("div", {
-    className: "key times"
-  }, "x"), /*#__PURE__*/_react.default.createElement("div", {
-    className: "key seven"
-  }, "7"), /*#__PURE__*/_react.default.createElement("div", {
-    className: "key eight"
-  }, "8"), /*#__PURE__*/_react.default.createElement("div", {
-    className: "key nine"
-  }, "9"), /*#__PURE__*/_react.default.createElement("div", {
-    className: "key menus"
-  }, "-"), /*#__PURE__*/_react.default.createElement("div", {
-    className: "key four"
-  }, "4"), /*#__PURE__*/_react.default.createElement("div", {
-    className: "key five"
-  }, "5"), /*#__PURE__*/_react.default.createElement("div", {
-    className: "key sixe"
-  }, "6"), /*#__PURE__*/_react.default.createElement("div", {
-    className: "key plus"
-  }, "+"), /*#__PURE__*/_react.default.createElement("div", {
-    className: "key one"
-  }, "1"), /*#__PURE__*/_react.default.createElement("div", {
-    className: "key two"
-  }, "2"), /*#__PURE__*/_react.default.createElement("div", {
-    className: "key three"
-  }, "3"), /*#__PURE__*/_react.default.createElement("div", {
-    className: "key equal"
-  }, "="), /*#__PURE__*/_react.default.createElement("div", {
-    className: "key zero"
-  }, "0"), /*#__PURE__*/_react.default.createElement("div", {
-    className: "key dot"
+  }, /*#__PURE__*/_react.default.createElement("button", {
+    className: "key ac",
+    onClick: handleClick,
+    "data-value": ""
+  }, "AC"), /*#__PURE__*/_react.default.createElement("button", {
+    className: "key division",
+    onClick: handleClick,
+    "data-value": "/"
+  }, "/"), /*#__PURE__*/_react.default.createElement("button", {
+    className: "key times",
+    onClick: handleClick,
+    "data-value": "X"
+  }, "x"), /*#__PURE__*/_react.default.createElement("button", {
+    className: "key seven",
+    onClick: handleClick,
+    "data-value": "7"
+  }, "7"), /*#__PURE__*/_react.default.createElement("button", {
+    className: "key eight",
+    onClick: handleClick,
+    "data-value": "8"
+  }, "8"), /*#__PURE__*/_react.default.createElement("button", {
+    className: "key nine",
+    onClick: handleClick,
+    "data-value": "9"
+  }, "9"), /*#__PURE__*/_react.default.createElement("button", {
+    className: "key menus",
+    onClick: handleClick,
+    "data-value": "-"
+  }, "-"), /*#__PURE__*/_react.default.createElement("button", {
+    className: "key four",
+    onClick: handleClick,
+    "data-value": "4"
+  }, "4"), /*#__PURE__*/_react.default.createElement("button", {
+    className: "key five",
+    onClick: handleClick,
+    "data-value": "5"
+  }, "5"), /*#__PURE__*/_react.default.createElement("button", {
+    className: "key sixe",
+    onClick: handleClick,
+    "data-value": "6"
+  }, "6"), /*#__PURE__*/_react.default.createElement("button", {
+    className: "key plus",
+    onClick: handleClick,
+    "data-value": "+"
+  }, "+"), /*#__PURE__*/_react.default.createElement("button", {
+    className: "key one",
+    onClick: handleClick,
+    "data-value": "1"
+  }, "1"), /*#__PURE__*/_react.default.createElement("button", {
+    className: "key two",
+    onClick: handleClick,
+    "data-value": "2"
+  }, "2"), /*#__PURE__*/_react.default.createElement("button", {
+    className: "key three",
+    onClick: handleClick,
+    "data-value": "3"
+  }, "3"), /*#__PURE__*/_react.default.createElement("button", {
+    className: "key equal",
+    onClick: handleClick,
+    "data-value": "="
+  }, "="), /*#__PURE__*/_react.default.createElement("button", {
+    className: "key zero",
+    onClick: handleClick,
+    "data-value": "0"
+  }, "0"), /*#__PURE__*/_react.default.createElement("button", {
+    className: "key dot",
+    onClick: handleClick,
+    "data-value": "."
   }, ".")));
 }
 },{"react":"node_modules/react/index.js"}],"components/App.js":[function(require,module,exports) {
